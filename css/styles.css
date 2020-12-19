@@ -1,3 +1,13 @@
+:root {
+     --primary-text-color: #212121;
+     --title-text-color: #212121;
+     --text-color: #757575;
+     --accent-color: #2196f3;
+     --accent-colornav: #0000FF;
+     --buttontext-color: #ffffff;
+     --buttonbcg-color: #2196F3;
+}
+
 body {
     background-color: #FFFFFF;
     font-family: Roboto, sans-serif;
@@ -6,6 +16,10 @@ body {
 
 ul {
     list-style: none;
+}
+
+a {
+text-decoration: none
 }
 
 .page-header {
@@ -35,45 +49,42 @@ font-size: 14px;
 line-height: 1.14;
 letter-spacing: 0.02em;
 
-color: #212121
+color: var(--title-text-color)
 }
 
 .site-nav .link:hover,
-.site-nav .focus {
-    color: blue
+.site-nav .link:focus {
+    color: var(--accent-colornav)
 }
 
 .site-nav .link1:hover {
-    color: blue
+    color: var(--accent-colornav)
 }
 
 .site-nav .link2:hover {
-    color: blue
+    color: var(--accent-colornav)
 }
 
 
 .site-nav .link1.current {
-    color: #2196F3
+    color: var(--accent-color);
 }
 
-.accent {
-    color: #2196F3;
+.accent, .accent2 {
+    color: var(--accent-color);
 }
 
 .accent1 {
-    color: #212121;
-}
-
-.accent2 {
-   color: #2196F3;
+    color: var(--primary-text-color);
 }
 
 .accent3 {
     color:#FFFFFF;
 }
 
-.contacts {
-color: teal;
+.contacts .contacts-mail:hover,
+.contacts .contacts-phone:hover {
+color: var(--accent-colornav);
 }
 
 .contacts-mail {
@@ -82,7 +93,7 @@ font-size: 14px;
 line-height: 1.14;
 letter-spacing: 0.02em;
 
-color: #2196F3;
+color: var(--accent-color);
 }
 
 .contacts-phone {
@@ -91,7 +102,7 @@ font-size: 14px;
 line-height: 1.14;
 letter-spacing: 0.02em;
 
-color: #757575;
+color: var(--text-color);
 }
 
 
@@ -108,27 +119,21 @@ color: #757575;
     color: #FFFFFF
 } 
 
+/* button*/
+
 .button-main {
-    font-family: Roboto;
-font-style: normal;
-font-weight: bold;
+font-family: inherit;
+font-weight: bold;   
 font-size: 16px;
 line-height: 1.88;
+display: flex;
+align-items: center;
+text-align: center;
 letter-spacing: 0.06em;
-color: #FFFFFF;
-background: #2196F3;
+color: var(--buttontext-color);
+background: var(--buttonbcg-color);
 }
 
-.button {
-    font-weight: 500;
-font-size: 16px;
-line-height: 1.63;
-color: #FFFFFF;
-background-color: #2196F3;   
-/* shadow-middle */
-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-border-radius: 4px;
-}
 
 .section1-link {
     font-weight: bold;
@@ -153,14 +158,14 @@ font-size: 14px;
 line-height: 1.14;
 letter-spacing: 0.03em;
 text-transform: uppercase;
-    color: #212121;
+    color: var(--primary-text-color);
 }
 .section2-text {
     font-size: 14px;
     line-height: 1.71;
 /* or 171% */
     letter-spacing: 0.03em;
-    color: #757575;
+    color: var(--text-color);
 }
 
 .section2-title1 {
@@ -168,7 +173,7 @@ text-transform: uppercase;
    font-size: 36px;
    line-height: 1.17;
   
-   color: #212121;
+   color: var(--primary-text-color);
 }
 
 .section3 {
@@ -181,7 +186,7 @@ font-size: 36px;
 line-height: 1.17;
 
 
-color: #212121;
+color: var(--primary-text-color);
 
 }
 .section3-name {
@@ -190,13 +195,13 @@ font-weight: 500;
 font-size: 16px;
 line-height: 19px;
 
-    color: #212121;
+    color: var(--primary-text-color);
 }
 .section3-title {
     
 font-size: 16px;
 line-height: 1.19;
-    color: #757575;
+    color: var(--text-color);
 }
 
 .adress {
@@ -230,7 +235,7 @@ font-style: normal;
 font-weight: bold;
 font-size: 26px;
 line-height: 1.19;
-color: #2196F3;
+color: var(--accent-color);
 }
 
 /* Portfolio*/
@@ -239,15 +244,27 @@ color: #2196F3;
     background-color: #E5E5E5;
 }
 
-.button1 {
+.button {
+    font-family: inherit;
     font-weight: 500;
+    font-size: 16px;
+    line-height: 1.63;
+    color: #FFFFFF;
+    background-color: #2196F3;   
+    /* shadow-middle */
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    } 
+
+.button1 {
+font-family: inherit;
+font-weight: 500;
 font-size: 16px;
 line-height: 1.63;
 color: #212121;
-    background: #F5F4FA;
+background: #F5F4FA;
 border-radius: 4px;
 }
-
 
 
 .section-title {
@@ -255,12 +272,12 @@ border-radius: 4px;
 font-weight: bold;
 font-size: 18px;
 line-height: 2.00;
-color: #212121;
+color: var(--primary-text-color);
 }
 
 .section-text {
    
 font-size: 16px;
 line-height: 1.88;
-color: #757575;
+color: var(--text-color);
 }
